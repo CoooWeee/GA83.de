@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA83</title>
+    <style>
+        :root {
+            --dark: #0a0a0a;
+            --accent: #ff4646;
+            --text: #f0f0f0;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--dark);
+            color: var(--text);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            background: 
+                linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.9)),
+                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSIjZmY0NjQ2MTAiLz4KPC9zdmc+');
+        }
+
+        .palm-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50vh;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .palm {
+            position: absolute;
+            bottom: -20px;
+            width: 200px;
+            height: 400px;
+            background: #000;
+            clip-path: path('M 100,400 L 120,300 C 140,250 160,200 200,150 C 160,170 140,190 130,220 L 140,180 C 160,150 180,120 200,80 C 150,110 130,140 120,170 L 125,140 C 140,100 160,70 180,30 C 130,60 110,90 100,120 C 90,90 70,60 20,30 C 40,70 60,100 75,140 L 80,170 C 70,140 50,110 0,80 C 20,120 40,150 60,180 L 70,220 C 60,190 40,170 0,150 C 40,200 60,250 80,300 L 100,400');
+        }
+
+        .palm:nth-child(1) { left: 10%; transform: scale(0.8); }
+        .palm:nth-child(2) { left: 30%; transform: scale(1.2); }
+        .palm:nth-child(3) { right: 25%; transform: scale(0.9); }
+        .palm:nth-child(4) { right: 5%; transform: scale(1.1); }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 8vw;
+            margin: 0;
+            color: var(--accent);
+            text-shadow: 
+                0 0 10px rgba(255,70,70,0.5),
+                0 0 20px rgba(255,70,70,0.3);
+        }
+
+        h2 {
+            font-size: 2vw;
+            font-weight: 300;
+            margin: 1rem 0;
+            opacity: 0.8;
+        }
+
+        .glitch {
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 12vw; }
+            h2 { font-size: 4vw; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K8H7CNK');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8H7CNK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <div class="container">
+        <div class="palm-container">
+            <div class="palm"></div>
+            <div class="palm"></div>
+            <div class="palm"></div>
+            <div class="palm"></div>
+        </div>
+        <div class="content">
+            <h1 class="glitch">GA83</h1>
+            <h2>unlock the unknown</h2>
+        </div>
+    </div>
+
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-QWQKQEXPMV"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof gtag === 'function') {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-QWQKQEXPMV');
+            }
+        });
+    </script>
+</body>
+</html>
